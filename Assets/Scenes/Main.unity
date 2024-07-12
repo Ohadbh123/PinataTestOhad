@@ -916,6 +916,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6ddebd283a7f843af7300ce56a2089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvas: {fileID: 864891098}
+  _levelCompletePopup: {fileID: 5921552824867368703, guid: 0b6a9f931aa3d4d43ba9316aa3487159, type: 3}
+  _levelSelector: {fileID: 1147929467}
+  _PlayButton: {fileID: 564998269}
 --- !u!1 &564998267
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +932,7 @@ GameObject:
   - component: {fileID: 564998271}
   - component: {fileID: 564998270}
   - component: {fileID: 564998269}
+  - component: {fileID: 564998272}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1037,6 +1042,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564998267}
   m_CullTransparentMesh: 1
+--- !u!114 &564998272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564998267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756cc7c0da084ed98e5370c45646dbc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _size: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!1 &813105190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,7 +1442,7 @@ GameObject:
   - component: {fileID: 881419118}
   - component: {fileID: 881419117}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1546,7 +1565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &898710675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1609,8 +1628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -3.0029907, y: 0}
-  m_SizeDelta: {x: -84.0829, y: 406.8139}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -70, y: 406.8139}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907208671
 MonoBehaviour:
@@ -1632,7 +1651,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 80, y: 80}
+  m_CellSize: {x: 60, y: 60}
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 1
   m_ConstraintCount: 3
@@ -1672,8 +1691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 531.88}
+  m_AnchoredPosition: {x: 0.36502075, y: 8.667}
+  m_SizeDelta: {x: -80.73003, y: 350.451}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &923942329
 MonoBehaviour:
@@ -2180,6 +2199,7 @@ MonoBehaviour:
   _levels:
   - {fileID: 7065394447777426478, guid: a240c0d0ad5461f44be96ef013ca5af2, type: 3}
   _levelHolder: {fileID: 2023451133}
+  _animationDelay: 0.5
 --- !u!1 &1202069119
 GameObject:
   m_ObjectHideFlags: 0

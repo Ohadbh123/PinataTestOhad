@@ -1,3 +1,4 @@
+using System;
 using Gameplay.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,9 +10,16 @@ namespace Gameplay
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private ProjectileConfig _projectileConfig;
 
-        [HideInInspector]
-        public UnityEvent OnProjectileInteractibleHit;
+        public UnityAction <ProjectileController>OnProjectileInteractableHit;
+
+        private bool _didHitAnInteractable;
         
+        private void Start()
+        {
+            //if didnt hit anything, clean it
+            DestroyProjectile(5f);
+        }
+
         private void FixedUpdate()
         {
             _rigidbody.velocity = transform.up * _projectileConfig.ProjectileSpeed;
@@ -21,8 +29,14 @@ namespace Gameplay
         {
             if (col.TryGetComponent(out IInteractable interactable))
             {
+                _didHitAnInteractable = true;
                 interactable.Interact(this);
-                OnProjectileInteractibleHit.Invoke();
+                return;
+            }
+            
+            if (col.TryGetComponent(out ICollectible collectible))
+            {
+                collectible.Collect();
                 return;
             }
             
@@ -32,10 +46,14 @@ namespace Gameplay
             }
         }
 
-        public void DestroyProjectile()
+        public void DestroyProjectile(float delay = 0)
         {
-            OnProjectileInteractibleHit.RemoveAllListeners();
-            Destroy(gameObject);
+            if (_didHitAnInteractable)
+            {
+                OnProjectileInteractableHit.Invoke(this);
+            }
+
+            Destroy(gameObject , delay);
         }
     }
 }

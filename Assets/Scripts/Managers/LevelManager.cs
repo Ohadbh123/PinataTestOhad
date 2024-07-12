@@ -1,6 +1,6 @@
 using Gameplay;
 using UnityEngine;
-
+        
 namespace Managers
 {
     public class LevelManager : MonoBehaviour
@@ -21,14 +21,9 @@ namespace Managers
 
         private void OnLevelCompleted()
         {
-            GameManager.Instance.UpdateStarsAmount(_coinCount);
+            GameManager.Instance.OnLevelCompleted(_coinCount);
         }
     
-        public void OnLevelFailed()
-        {
-        
-        }
-
         private void OnCoinAchieved()
         {
             _coinCount++;

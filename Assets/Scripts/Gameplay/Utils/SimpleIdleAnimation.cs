@@ -3,14 +3,15 @@ using UnityEngine;
 
 namespace Gameplay.Utils
 {
-    public class SimpleRotator : MonoBehaviour
+    public class SimpleIdleAnimation : MonoBehaviour
     {
         [SerializeField] private float _speed;
+        [SerializeField] private Vector3 _size = Vector3.one/2;
         private void Start()
         {
-            transform.DORotate(new Vector3(0,0,360), _speed, RotateMode.FastBeyond360)
+            transform.DOScale(_size, _speed)
                 .SetEase(Ease.InOutSine)
-                .SetLoops(-1, LoopType.Restart)
+                .SetLoops(-1, LoopType.Yoyo)
                 .SetRelative(true);
         }
     }

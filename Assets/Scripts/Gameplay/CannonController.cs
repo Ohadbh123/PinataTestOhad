@@ -1,21 +1,27 @@
 using System.Collections;
 using Gameplay.Interfaces;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Gameplay
 {
     public class CannonController : MonoBehaviour, IInteractable
     {
+        private static readonly int _animatorShootTrigger = Animator.StringToHash("Shoot");
+
+        [SerializeField] private Animator _animator;
         [SerializeField] private CannonConfig _cannonConfig;
         [SerializeField] private Transform _aimTransform;
         [SerializeField] private Collider2D _collider2D;
+        [SerializeField] private GameObject _activeCannonMarker;
 
         private bool _isAvailableToShoot;
+        private bool _wasDeactivated;
 
         void Start()
         {
             _isAvailableToShoot = _cannonConfig.CanShootOnStartup;
-
+            _activeCannonMarker.SetActive(_isAvailableToShoot);
             // is Continuous movement required
             if (_cannonConfig.ContinuousMovementConfig != null)
             {
@@ -26,8 +32,10 @@ namespace Gameplay
         private void OnMouseDown()
         {
             if (!_isAvailableToShoot) return;
-
+            
+            _animator.SetTrigger(_animatorShootTrigger);
             _collider2D.enabled = false;
+            _isAvailableToShoot = false;
             StartCoroutine("ShootProjectile");
         }
 
@@ -36,31 +44,37 @@ namespace Gameplay
             var projectileController = 
                 Instantiate(_cannonConfig.ProjectilePrefab, _aimTransform.position,Quaternion.identity)
                     .GetComponent<ProjectileController>();
-            
-            projectileController.OnProjectileInteractibleHit?.AddListener(DeactivateCannon);
+
+            projectileController.OnProjectileInteractableHit += DeactivateCannon;
             
             yield return new WaitForSeconds(_cannonConfig.CooldownTime);
-            
-            _collider2D.enabled = _isAvailableToShoot;
+
+            ResetCannon();
         }
 
-        private void DeactivateCannon()
+        private void DeactivateCannon(ProjectileController projectileController)
         {
+            projectileController.OnProjectileInteractableHit -= DeactivateCannon;
+            _wasDeactivated = true;
             _isAvailableToShoot = false;
             _collider2D.enabled = false;
+            _activeCannonMarker.SetActive(false);
         }
-
+        
         private void ResetCannon()
         {
+            if (_wasDeactivated) return;
+            
             _isAvailableToShoot = true;
             _collider2D.enabled = true;
+            _activeCannonMarker.SetActive(true);
         }
 
         public void Interact(ProjectileController projectileController)
         {
-            projectileController.DestroyProjectile();
             _cannonConfig.TurnCannonOnHit(transform);
             ResetCannon();
+            projectileController.DestroyProjectile();
         }
     }
 }

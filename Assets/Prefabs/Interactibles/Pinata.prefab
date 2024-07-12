@@ -911,15 +911,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420096, guid: 055842fc5d73543ac873c01de349e2cf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6000001
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 420096, guid: 055842fc5d73543ac873c01de349e2cf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5999999
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 420096, guid: 055842fc5d73543ac873c01de349e2cf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5999999
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 420096, guid: 055842fc5d73543ac873c01de349e2cf, type: 3}
       propertyPath: m_LocalPosition.x
