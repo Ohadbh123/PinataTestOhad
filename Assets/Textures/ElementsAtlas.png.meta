@@ -261,9 +261,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 759
-        y: 620
-        width: 120
-        height: 127
+        y: 616
+        width: 136
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,9 +366,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 194
-        y: 67
-        width: 136
-        height: 131
+        y: 59
+        width: 118
+        height: 139
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,9 +386,9 @@ TextureImporter:
       name: ElementsAtlas_13
       rect:
         serializedVersion: 2
-        x: 336
+        x: 318
         y: 76
-        width: 116
+        width: 120
         height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -399,6 +399,27 @@ TextureImporter:
       bones: []
       spriteID: 3ea0390fd1037f74aaa811301ea3a564
       internalID: 952615545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ElementsAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 131
+        width: 116
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e48a9b7f5bdd746bdb9cbd5d7b7374
+      internalID: 2040828980
       vertices: []
       indices: 
       edges: []
@@ -420,6 +441,7 @@ TextureImporter:
       ElementsAtlas_11: 827817635
       ElementsAtlas_12: 2085744694
       ElementsAtlas_13: 952615545
+      ElementsAtlas_14: 2040828980
       ElementsAtlas_2: 966761137
       ElementsAtlas_3: 475442843
       ElementsAtlas_4: 104757253

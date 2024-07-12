@@ -23,7 +23,8 @@ detonator-card.png;3;3;185;195; 0.5;0.5; 0;0;0;0
 magic-wand-card.png;279;209;201;264; 0.5;0.5; 0;0;0;0
 laser-beam-card.png;555;587;198;160; 0.5;0.5; 0;0;0;0
 rubber-ducky-card.png;831;832;161;189; 0.5;0.5; 0;0;0;0
-gem_cupid_heart_white.png;194;67;136;131; 0.5;0.5; 0;0;0;0
+gem_color_crystal_purple.png;194;59;118;139; 0.5;0.5; 0;0;0;0
 firecracker-card.png;486;264;149;209; 0.5;0.5; 0;0;0;0
-gem_bomb_white.png;759;620;120;127; 0.5;0.5; 0;0;0;0
-gem_lightning_white.png;336;76;116;127; 0.5;0.5; 0;0;0;0
+gem_cupid_heart_purple.png;759;616;136;131; 0.5;0.5; 0;0;0;0
+gem_bomb_purple.png;318;76;120;127; 0.5;0.5; 0;0;0;0
+gem_lightning_purple.png;486;131;116;127; 0.5;0.5; 0;0;0;0
