@@ -1,0 +1,20 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641
+#
+# created with Free texture packer v0.6.7
+# http://free-tex-packer.com
+#
+:format=40300
+:texture=PinataAtlas.png
+:size=1024x1024
+:pivotpoints=enabled
+:borders=disabled
+
+pinata basic part1.png;3;485;424;536; 0.5;0.5; 0;0;0;0
+pinata basic part4.png;3;5;351;474; 0.5;0.5; 0;0;0;0
+pinata basic part2.png;360;75;368;404; 0.5;0.5; 0;0;0;0
+pinata basic part3.png;433;641;324;380; 0.5;0.5; 0;0;0;0
+pinata rope.png;763;771;8;250; 0.5;0.5; 0;0;0;0

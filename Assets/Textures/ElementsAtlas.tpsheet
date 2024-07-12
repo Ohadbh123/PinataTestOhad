@@ -1,0 +1,29 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641
+#
+# created with Free texture packer v0.6.7
+# http://free-tex-packer.com
+#
+:format=40300
+:texture=ElementsAtlas.png
+:size=1024x1024
+:pivotpoints=enabled
+:borders=disabled
+
+adventure-sticker-icon.png;3;753;270;268; 0.5;0.5; 0;0;0;0
+seasonal-sticker-icon.png;3;478;270;269; 0.5;0.5; 0;0;0;0
+any-sticker-icon.png;279;753;270;268; 0.5;0.5; 0;0;0;0
+silver-or-gold-sticker-icon.png;3;204;270;268; 0.5;0.5; 0;0;0;0
+silver-sticker-icon.png;279;479;270;268; 0.5;0.5; 0;0;0;0
+white-sticker-icon.png;555;753;270;268; 0.5;0.5; 0;0;0;0
+detonator-card.png;3;3;185;195; 0.5;0.5; 0;0;0;0
+magic-wand-card.png;279;209;201;264; 0.5;0.5; 0;0;0;0
+laser-beam-card.png;555;587;198;160; 0.5;0.5; 0;0;0;0
+rubber-ducky-card.png;831;832;161;189; 0.5;0.5; 0;0;0;0
+gem_cupid_heart_white.png;194;67;136;131; 0.5;0.5; 0;0;0;0
+firecracker-card.png;486;264;149;209; 0.5;0.5; 0;0;0;0
+gem_bomb_white.png;759;620;120;127; 0.5;0.5; 0;0;0;0
+gem_lightning_white.png;336;76;116;127; 0.5;0.5; 0;0;0;0
