@@ -9,12 +9,14 @@
 #
 :format=40300
 :texture=PinataAtlas.png
-:size=1024x1024
+:size=2048x1024
 :pivotpoints=enabled
 :borders=disabled
 
-pinata basic part1.png;3;485;424;536; 0.5;0.5; 0;0;0;0
-pinata basic part4.png;3;5;351;474; 0.5;0.5; 0;0;0;0
-pinata basic part2.png;360;75;368;404; 0.5;0.5; 0;0;0;0
-pinata basic part3.png;433;641;324;380; 0.5;0.5; 0;0;0;0
-pinata rope.png;763;771;8;250; 0.5;0.5; 0;0;0;0
+pinata basic hit.png;3;149;572;872; 0.5;0.5; 0;0;0;0
+pinata basic idle.png;581;153;472;868; 0.5;0.5; 0;0;0;0
+pinata basic part1.png;1059;485;424;536; 0.5;0.5; 0;0;0;0
+pinata basic part4.png;1059;5;351;474; 0.5;0.5; 0;0;0;0
+pinata basic part2.png;1416;75;368;404; 0.5;0.5; 0;0;0;0
+pinata basic part3.png;1489;641;324;380; 0.5;0.5; 0;0;0;0
+pinata rope.png;1819;771;8;250; 0.5;0.5; 0;0;0;0

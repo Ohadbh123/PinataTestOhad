@@ -427,6 +427,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6630377405778914678, guid: 093391245cc299049b6df8a1946801f6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1565488352, guid: 598560031b853334781b50a881697f22, type: 3}
     - target: {fileID: 7190563125605182844, guid: 093391245cc299049b6df8a1946801f6, type: 3}
       propertyPath: m_Name
       value: LineCourse

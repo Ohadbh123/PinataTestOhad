@@ -95,7 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 50
     textureCompression: 1
@@ -113,12 +113,12 @@ TextureImporter:
       name: PinataAtlas_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 486
-        width: 424
-        height: 535
+        x: 1
+        y: 143
+        width: 574
+        height: 878
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: PinataAtlas_1
       rect:
         serializedVersion: 2
-        x: 433
-        y: 641
-        width: 324
-        height: 380
+        x: 575
+        y: 155
+        width: 482
+        height: 866
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: PinataAtlas_2
       rect:
         serializedVersion: 2
-        x: 763
-        y: 771
-        width: 8
-        height: 250
+        x: 1059
+        y: 479
+        width: 430
+        height: 545
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: PinataAtlas_3
       rect:
         serializedVersion: 2
-        x: 3
-        y: 6
-        width: 351
-        height: 472
+        x: 1487
+        y: 635
+        width: 327
+        height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: PinataAtlas_4
       rect:
         serializedVersion: 2
-        x: 361
-        y: 75
-        width: 367
-        height: 404
+        x: 1692
+        y: 624
+        width: 12
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,6 +210,111 @@ TextureImporter:
       bones: []
       spriteID: 3d38f63f4e79aad4d8054e7a2772692f
       internalID: 1688734464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinataAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 492
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0519bd9ff7df5948a6fb9615fede903
+      internalID: -1257917044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinataAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 408
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e81c49df2e51b489ec12b5b2f0b364
+      internalID: 367972239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinataAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 0
+        width: 354
+        height: 481
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452678e5cab953348b6293249754cbc1
+      internalID: -199940919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinataAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 71
+        width: 374
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d18465422d86a49ab006e301d0add9
+      internalID: 1731075616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinataAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 772
+        width: 12
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0988a2a90565f7469cb23005e5ba44d
+      internalID: -1565488352
       vertices: []
       indices: 
       edges: []
@@ -230,6 +335,11 @@ TextureImporter:
       PinataAtlas_2: -381965883
       PinataAtlas_3: -813569147
       PinataAtlas_4: 1688734464
+      PinataAtlas_5: -1257917044
+      PinataAtlas_6: 367972239
+      PinataAtlas_7: -199940919
+      PinataAtlas_8: 1731075616
+      PinataAtlas_9: -1565488352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
