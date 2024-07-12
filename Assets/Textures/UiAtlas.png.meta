@@ -118,8 +118,8 @@ TextureImporter:
         width: 289
         height: 319
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 89, y: 89, z: 89, w: 89}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -139,8 +139,8 @@ TextureImporter:
         width: 292
         height: 94
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 128, y: 0, z: 126, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -160,7 +160,7 @@ TextureImporter:
         width: 247
         height: 240
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +181,7 @@ TextureImporter:
         width: 242
         height: 186
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: UiAtlas_6
       rect:
         serializedVersion: 2
-        x: 307
-        y: 493
-        width: 219
-        height: 221
+        x: 309
+        y: 652
+        width: 62
+        height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: UiAtlas_7
       rect:
         serializedVersion: 2
-        x: 561
-        y: 546
-        width: 230
-        height: 220
+        x: 387
+        y: 669
+        width: 139
+        height: 29
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: UiAtlas_8
       rect:
         serializedVersion: 2
-        x: 803
-        y: 549
-        width: 212
-        height: 214
+        x: 561
+        y: 546
+        width: 230
+        height: 220
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: UiAtlas_11
       rect:
         serializedVersion: 2
-        x: 803
-        y: 307
-        width: 208
-        height: 230
+        x: 387
+        y: 592
+        width: 139
+        height: 29
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: UiAtlas_16
       rect:
         serializedVersion: 2
-        x: 538
-        y: 73
-        width: 206
-        height: 234
+        x: 756
+        y: 122
+        width: 172
+        height: 173
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,12 +302,12 @@ TextureImporter:
       name: UiAtlas_9
       rect:
         serializedVersion: 2
-        x: 537
-        y: 314
-        width: 231
-        height: 226
+        x: 803
+        y: 549
+        width: 212
+        height: 214
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,12 +323,12 @@ TextureImporter:
       name: UiAtlas_3
       rect:
         serializedVersion: 2
-        x: 863
-        y: 772
-        width: 62
-        height: 252
+        x: 872
+        y: 972
+        width: 46
+        height: 46
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,6 +336,132 @@ TextureImporter:
       bones: []
       spriteID: 741efe871a0c41e4b9a012966b358299
       internalID: 5409251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 775
+        width: 49
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6faded0e6c68d02408b5fb91ef05b38d
+      internalID: 816917613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 576
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191b9722e012a5c4ca02886f66e07338
+      internalID: 681844857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 499
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5571ee236958f66409c58c44adbfa20b
+      internalID: 1953283401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 516
+        width: 139
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfce4a0295cf244f88d0fcd6ac60e79
+      internalID: -1814383978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 300
+        width: 206
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c62a6e428df26941afe5ef47f0083e8
+      internalID: -1465434531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UiAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 307
+        width: 208
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c163c85564f75e4e969631d880dcb32
+      internalID: 702195665
       vertices: []
       indices: 
       edges: []
