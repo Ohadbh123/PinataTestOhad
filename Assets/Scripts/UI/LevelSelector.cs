@@ -11,10 +11,11 @@ namespace UI
         [SerializeField] private LevelButtonView[] _levelsButtons;
         [SerializeField] private GameObject[] _levels;
         [SerializeField] private Transform _levelHolder;
-        [SerializeField] private float _animationDelay = 0.5f;
+        [SerializeField] private float _animationDelay = 0.1f;
 
         private int _currentLevelIndex;
         private LevelManager _currentLevel;
+        private Sequence _tweenSequence;
 
         private void Start()
         {
@@ -25,7 +26,7 @@ namespace UI
 
         private void CloseLevelSelector()
         {
-            transform.DOScale(Vector3.zero, _animationDelay/2);
+            transform.DOScale(Vector3.zero, _animationDelay);
         }
 
         private void LoadLevel (int levelIndex)
@@ -55,7 +56,18 @@ namespace UI
         public void LoadLevelSelector()
         {
             KillCurrentLevel();
+            
+            _tweenSequence = DOTween.Sequence();
+            _tweenSequence.SetDelay(_animationDelay);
             transform.DOScale(Vector3.one, _animationDelay);
+            
+            foreach (var button in _levelsButtons)
+            { 
+                _tweenSequence.Append
+                    (button.transform.DOScale(Vector3.one, _animationDelay));
+            }
+            
+            _tweenSequence.Append(_closeButton.transform.DOScale(Vector3.one, _animationDelay));
         }
 
         private void SetupButtonListeners()
