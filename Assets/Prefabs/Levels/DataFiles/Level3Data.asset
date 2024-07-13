@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7811c04e596f490081989fd40b4bb3ec, type: 3}
-  m_Name: CannonBombProjectileConfig
+  m_Script: {fileID: 11500000, guid: 78d7446ca50a4ce095134ff501308947, type: 3}
+  m_Name: Level3Data
   m_EditorClassIdentifier: 
-  ProjectileType: 0
-  ProjectileSpeed: 4
-  ProjectileDamage: 2

@@ -9,7 +9,7 @@ namespace UI
     {
         [SerializeField] protected RectTransform _panelHolder;
         [SerializeField] protected Button _closeButton;
-        [SerializeField] protected float _animationDelay = 0.5f;
+        [SerializeField] protected float _animationDelay = 0.2f;
         
         protected virtual void Start()
         {

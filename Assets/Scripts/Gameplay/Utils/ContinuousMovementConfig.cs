@@ -17,13 +17,18 @@ namespace Gameplay.Utils
     {
         public ContinuousMovementType startupContinuousMovementType;
         public float MovementMaxPosition;
+        public bool _xAxis;
 
         public void SetCannonContinuousMovement(Transform cannonTransform, float speed)
         {
             switch (startupContinuousMovementType)
             {
                 case ContinuousMovementType.YoYo:
-                    var newPosYoyo = new Vector2(MovementMaxPosition, cannonTransform.position.y);
+                    var newPosYoyo = _xAxis
+                        ? new Vector2(cannonTransform.position.x, MovementMaxPosition)
+                        : new Vector2(MovementMaxPosition, cannonTransform.position.y);
+
+                    
                     cannonTransform.DOMove(newPosYoyo, speed).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
                     break;
                 case ContinuousMovementType.Rotate90:

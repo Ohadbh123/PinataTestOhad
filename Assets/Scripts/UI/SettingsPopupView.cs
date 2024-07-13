@@ -29,5 +29,15 @@ namespace UI
             AudioManager.Instance.PlayButtonSound();
             GameManager.Instance.ResetProgress();
         }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            
+            _resetProgressButton.onClick.RemoveListener(ResetProgress);
+            _soundToggle.onValueChanged.RemoveListener(delegate {
+                ToggleAudio(_soundToggle);
+            });
+        }
     }
 }

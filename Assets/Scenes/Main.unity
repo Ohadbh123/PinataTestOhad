@@ -2718,8 +2718,10 @@ MonoBehaviour:
     LevelPrefab: {fileID: 7065394447777426478, guid: a240c0d0ad5461f44be96ef013ca5af2, type: 3}
   - LevelData: {fileID: 11400000, guid: b9ffe10acf5a98d48bb01e46cc4c86ea, type: 2}
     LevelPrefab: {fileID: 7065394447777426478, guid: 9609afde0df5a8b48913fd8c814919c8, type: 3}
+  - LevelData: {fileID: 11400000, guid: 366f92f9a24c3394f99fee488cc1eab1, type: 2}
+    LevelPrefab: {fileID: 7065394447777426478, guid: 38dcd073175d96b4eb2456ce34e0b986, type: 3}
   _levelHolder: {fileID: 2023451133}
-  _animationDelay: 0.2
+  _animationDelay: 0.1
   _starsAmountText: {fileID: 1424510236}
 --- !u!1 &1202069119
 GameObject:

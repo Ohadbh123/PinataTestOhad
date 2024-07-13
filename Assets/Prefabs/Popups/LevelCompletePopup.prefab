@@ -907,7 +907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panelHolder: {fileID: 5384858948915165494}
   _closeButton: {fileID: 4371344004054029143}
-  _animationDelay: 0.3
+  _animationDelay: 0.15
   _starsHolders:
   - {fileID: 1715974554674468508}
   - {fileID: 5168748335266849280}

@@ -8,8 +8,8 @@ namespace Gameplay
     public class ProjectileController : MonoBehaviour
     {
         [SerializeField] private Rigidbody2D _rigidbody;
-        [SerializeField] private ProjectileConfig _projectileConfig;
         [SerializeField] private Collider2D _collider2D;
+        [SerializeField] public float _projectileSpeed = 4f;
 
         public UnityAction <ProjectileController>OnProjectileInteractableHit;
 
@@ -32,7 +32,7 @@ namespace Gameplay
 
         private void FixedUpdate()
         {
-            _rigidbody.velocity = _direction * _projectileConfig.ProjectileSpeed;
+            _rigidbody.velocity = _direction * _projectileSpeed;
         }
 
         private void OnTriggerEnter2D(Collider2D col)
@@ -52,7 +52,8 @@ namespace Gameplay
             
             if (col.TryGetComponent(out IDamageable damageable))
             {
-                damageable.TryTakeDamage(_projectileConfig.ProjectileDamage);
+                damageable.TakeDamage();
+                DestroyProjectile();
             }
         }
 

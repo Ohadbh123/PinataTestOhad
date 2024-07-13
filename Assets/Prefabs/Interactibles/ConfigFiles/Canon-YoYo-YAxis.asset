@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a9ccdfc7fa64de48941e9fbb3051c0d, type: 3}
-  m_Name: Canon-YoYo
+  m_Name: Canon-YoYo-YAxis
   m_EditorClassIdentifier: 
   OnHitMovementType: 0
   ContinuousMovementConfig: {fileID: 11400000, guid: 012605012402e4a4495e799886da2191, type: 2}
