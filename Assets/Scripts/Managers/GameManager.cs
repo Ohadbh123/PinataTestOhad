@@ -11,24 +11,32 @@ namespace Managers
     public class GameManager : PersistentSingleton<GameManager>
     { 
         [SerializeField] private Transform _canvas;
-        [SerializeField] private GameObject _levelCompletePopup;
-        [SerializeField] private LevelSelector _levelSelector;
-        [SerializeField] private Button _playButton;
         [SerializeField] private Transform _mainContent;
+        [SerializeField] private LevelSelector _levelSelector;
+        
+        [SerializeField] private Button _playButton;
+        [SerializeField] private Button _settingsButton;
+        [SerializeField] private GameObject _levelCompletePopup;
+        [SerializeField] private GameObject _settingsPopup;
+        
         [SerializeField] private AudioSource _mainThemeSound;
         [SerializeField] private AudioSource _levelThemeSound;
-        [SerializeField] private TMP_Text _starsAmountText;
 
-        private int _starsAmount;
         private GameState _gameState = GameState.Startup;
 
         private void Start()
         {
-            UpdateStarsAmount(0);
             LoadMainContent(true);
             SwitchThemeMusic(_gameState);
             UpdateGameState(GameState.MainScreen);
             _playButton.onClick.AddListener(OnPlayButtonClicked);
+            _settingsButton.onClick.AddListener(OnSettingsButtonClicked);
+        }
+
+        private void OnSettingsButtonClicked()
+        {
+            AudioManager.Instance.PlayButtonSound();
+            Instantiate(_settingsPopup, _canvas);
         }
 
         private void OnPlayButtonClicked()
@@ -38,15 +46,10 @@ namespace Managers
             LoadLevelSelector();
         }
 
-        private void UpdateStarsAmount(int amount)
-        {
-            _starsAmount += amount;
-            _starsAmountText.text = _starsAmount + "/" + _levelSelector.GetTotalStarsAmount();
-        }
-
         public void OnLevelCompleted(int coinCount)
         {
-            UpdateStarsAmount(coinCount);
+            _levelSelector.UpdateLevelCompleted(coinCount);
+            _levelSelector.UpdateStarsAmount();
             StartCoroutine(LoadLevelCompletedPopup(coinCount));
         }
 
@@ -100,6 +103,11 @@ namespace Managers
                     break;
             }
 
+        }
+
+        public void ResetProgress()
+        {
+            _levelSelector.ResetProgress();
         }
     }
 }

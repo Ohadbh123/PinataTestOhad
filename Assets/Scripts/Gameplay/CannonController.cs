@@ -48,6 +48,7 @@ namespace Gameplay
                 Instantiate(_cannonConfig.ProjectilePrefab, _aimTransform.position,Quaternion.identity)
                     .GetComponent<ProjectileController>();
 
+            projectileController.SetupProjectileDirection(_aimTransform.up);
             projectileController.OnProjectileInteractableHit += DeactivateCannon;
             
             yield return new WaitForSeconds(_cannonConfig.CooldownTime);
@@ -60,7 +61,7 @@ namespace Gameplay
             projectileController.OnProjectileInteractableHit -= DeactivateCannon;
             _wasDeactivated = true;
             _isAvailableToShoot = false;
-            _collider2D.enabled = false;
+            _collider2D.enabled = true;
             _activeCannonMarker.SetActive(false);
         }
         
@@ -75,6 +76,7 @@ namespace Gameplay
 
         public void Interact(ProjectileController projectileController)
         {
+            _wasDeactivated = false;
             _cannonConfig.TurnCannonOnHit(transform);
             ResetCannon();
             projectileController.DestroyProjectile();

@@ -13,6 +13,7 @@ namespace Managers
         [SerializeField] private CoinController [] _coinControllers;
         [SerializeField] private TMP_Text _introBarText;
         [SerializeField] private AudioSource _levelIntroSound;
+        [SerializeField] private LevelData _levelData;
 
         private int _coinCount;
 
@@ -56,7 +57,12 @@ namespace Managers
 
         public void KillLevel()
         {
-            Destroy(gameObject);
+            DestroyImmediate(gameObject);
+        }
+
+        public void UpdateLevelData(int coinCollected)
+        {
+            _levelData.UpdateStarsAmount(coinCollected);
         }
 
         private void OnDestroy()

@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 4912634094249705125}
   _projectileConfig: {fileID: 11400000, guid: 4d0322e9dbde47243bbfeb624360d825, type: 2}
+  _collider2D: {fileID: 4381253872007540094}
 --- !u!50 &4912634094249705125
 Rigidbody2D:
   serializedVersion: 4
@@ -83,7 +84,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8246916177889625554}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

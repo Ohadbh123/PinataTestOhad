@@ -1,4 +1,7 @@
+using System;
 using DG.Tweening;
+using Managers;
+using TMPro;
 using UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,16 +12,18 @@ namespace Managers
     {
         [SerializeField] private Button _closeButton;
         [SerializeField] private LevelButtonView[] _levelsButtons;
-        [SerializeField] private GameObject[] _levels;
+        [SerializeField] private Level[] _levels;
         [SerializeField] private Transform _levelHolder;
         [SerializeField] private float _animationDelay = 0.1f;
+        [SerializeField] private TMP_Text _starsAmountText;
 
         private int _currentLevelIndex;
-        private LevelManager _currentLevel;
+        private LevelManager _currentLevelManager;
         private Sequence _tweenSequence;
 
         private void Start()
         {
+            UpdateStarsAmount();
             SetupButtonListeners();
             transform.localScale = Vector3.zero;
             _closeButton.onClick.AddListener(LoadMainScreen);
@@ -34,32 +39,47 @@ namespace Managers
             AudioManager.Instance.PlayButtonSound();
             KillCurrentLevel();
             CloseLevelSelector();
-            _currentLevel = Instantiate(_levels[levelIndex].gameObject, _levelHolder).GetComponent<LevelManager>();
+            InstantiateLevel(levelIndex);
             _currentLevelIndex = levelIndex;
             GameManager.Instance.UpdateGameState(GameState.Level);
+        }
+
+        private void InstantiateLevel(int index)
+        {
+            var levelPrefab = Instantiate(_levels[index].LevelPrefab, _levelHolder).GetComponent<LevelManager>();
+            _currentLevelManager = levelPrefab.GetComponent<LevelManager>();
         }
 
         public void LoadNextLevel()
         {
             KillCurrentLevel();
-            _currentLevelIndex = _currentLevelIndex + 1 <= _levels.Length ? _currentLevelIndex++ : 0;
-            _currentLevel = Instantiate(_levels[_currentLevelIndex].gameObject, _levelHolder).GetComponent<LevelManager>();
+            
+            if (_currentLevelIndex + 1 <= _levels.Length -1)
+            {
+                _currentLevelIndex++;
+            }
+            else
+            {
+                _currentLevelIndex = 0;
+            }
+            
+            InstantiateLevel(_currentLevelIndex);
             GameManager.Instance.UpdateGameState(GameState.Level);
         }
 
         private void KillCurrentLevel()
         {
-            if (_currentLevel != null)
+            if (_currentLevelManager != null)
             {
-                _currentLevel.KillLevel();
-                _currentLevel = null;
+                _currentLevelManager.KillLevel();
+                _currentLevelManager = null;
             }
         }
         
         public void RestartLevel()
         {
             KillCurrentLevel();
-            _currentLevel = Instantiate(_levels[_currentLevelIndex].gameObject, _levelHolder).GetComponent<LevelManager>();
+            InstantiateLevel(_currentLevelIndex);
         }
 
         public void LoadLevelSelector()
@@ -105,11 +125,49 @@ namespace Managers
             _closeButton.onClick.RemoveListener(CloseLevelSelector);
         }
 
-        public int GetTotalStarsAmount()
+        private int GetTotalStarsAmount()
         {
             return _levels.Length * 3;
         }
 
+        public void UpdateLevelCompleted(int coins)
+        {
+            _currentLevelManager.UpdateLevelData(coins);
+            _levelsButtons[_currentLevelIndex].SetLevelCompleted(coins == 3);
+        }
+        
+        public void UpdateStarsAmount()
+        {
+            var starsAmount = 0;
+
+            for (var i = 0; i < _levels.Length; i++)
+            {
+                starsAmount += _levels[i].LevelData.GetStarsAmount();
+            }
+            
+            _starsAmountText.text = starsAmount + "/" + GetTotalStarsAmount();
+        }
+
+        public void ResetProgress()
+        {
+            for (var i = 0; i < _levels.Length; i++)
+            {
+                _levels[i].LevelData.ResetProgress();
+            }
+
+            foreach (var button in _levelsButtons)
+            {
+                button.ResetButton();
+            }
+            UpdateStarsAmount();
+        }
     }
+}
+
+[Serializable]
+internal struct Level
+{
+    public LevelData LevelData;
+    public GameObject LevelPrefab;
 }
 

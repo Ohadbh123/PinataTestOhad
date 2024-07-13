@@ -1,6 +1,5 @@
-using System;
+using System.Collections;
 using Gameplay.Interfaces;
-using Managers;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,20 +9,30 @@ namespace Gameplay
     {
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private ProjectileConfig _projectileConfig;
+        [SerializeField] private Collider2D _collider2D;
 
         public UnityAction <ProjectileController>OnProjectileInteractableHit;
 
         private bool _didHitAnInteractable;
+        private Vector2 _direction;
         
         private void Start()
         {
+            StartCoroutine(nameof(SetupCollider));
             //if didnt hit anything, clean it
             DestroyProjectile(5f);
         }
 
+        private IEnumerator SetupCollider()
+        {
+            yield return new WaitForSeconds(.2f);
+            _collider2D.enabled = true;
+        }
+        
+
         private void FixedUpdate()
         {
-            _rigidbody.velocity = transform.up * _projectileConfig.ProjectileSpeed;
+            _rigidbody.velocity = _direction * _projectileConfig.ProjectileSpeed;
         }
 
         private void OnTriggerEnter2D(Collider2D col)
@@ -45,6 +54,11 @@ namespace Gameplay
             {
                 damageable.TryTakeDamage(_projectileConfig.ProjectileDamage);
             }
+        }
+
+        public void SetupProjectileDirection(Vector2 direction)
+        {
+            _direction = direction;
         }
 
         public void DestroyProjectile(float delay = 0)
