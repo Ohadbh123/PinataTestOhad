@@ -43,6 +43,8 @@ namespace UI
 
         protected override void OnCloseButtonPressed()
         {
+            AudioManager.Instance.PlayButtonSound();
+
             _panelHolder.transform.DOScale(Vector3.zero, _animationDelay).OnComplete(() =>
             {
                 GameManager.Instance.LoadLevelSelector();
@@ -52,6 +54,8 @@ namespace UI
 
         private void LoadNextLevel()
         {
+            AudioManager.Instance.PlayButtonSound();
+            
             _panelHolder.transform.DOScale(Vector3.zero, _animationDelay).OnComplete(() =>
             {
                 GameManager.Instance.LoadNextLevel();
@@ -62,6 +66,7 @@ namespace UI
         protected override void OnDestroy()
         {
             base.OnDestroy();
+            
             _nextLevelButton.onClick.RemoveListener(LoadNextLevel);
         }
     }

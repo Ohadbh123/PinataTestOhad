@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using Gameplay;
 using TMPro;
 using UnityEngine;
@@ -35,11 +34,13 @@ namespace Managers
 
         private void ExitLevel()
         {
+            AudioManager.Instance.PlayButtonSound();
             GameManager.Instance.LoadLevelSelector();
         }
 
         private void RestartLevel()
         {
+            AudioManager.Instance.PlayButtonSound();
             GameManager.Instance.RestartLevel();
         }
 

@@ -31,10 +31,12 @@ namespace Managers
 
         private void LoadLevel (int levelIndex)
         {
+            AudioManager.Instance.PlayButtonSound();
             KillCurrentLevel();
             CloseLevelSelector();
             _currentLevel = Instantiate(_levels[levelIndex].gameObject, _levelHolder).GetComponent<LevelManager>();
             _currentLevelIndex = levelIndex;
+            GameManager.Instance.UpdateGameState(GameState.Level);
         }
 
         public void LoadNextLevel()
@@ -42,6 +44,7 @@ namespace Managers
             KillCurrentLevel();
             _currentLevelIndex = _currentLevelIndex + 1 <= _levels.Length ? _currentLevelIndex++ : 0;
             _currentLevel = Instantiate(_levels[_currentLevelIndex].gameObject, _levelHolder).GetComponent<LevelManager>();
+            GameManager.Instance.UpdateGameState(GameState.Level);
         }
 
         private void KillCurrentLevel()
@@ -88,7 +91,9 @@ namespace Managers
         private void LoadMainScreen()
         {
             CloseLevelSelector();
+            AudioManager.Instance.PlayButtonSound();
             GameManager.Instance.LoadMainContent(true);
+            GameManager.Instance.UpdateGameState(GameState.MainScreen);
         }
         
         private void OnDestroy()
@@ -100,7 +105,11 @@ namespace Managers
             _closeButton.onClick.RemoveListener(CloseLevelSelector);
         }
 
-      
+        public int GetTotalStarsAmount()
+        {
+            return _levels.Length * 3;
+        }
+
     }
 }
 

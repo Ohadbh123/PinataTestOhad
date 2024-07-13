@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Managers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,8 @@ namespace UI
         
         protected virtual void OnCloseButtonPressed()
         {
+            AudioManager.Instance.PlayButtonSound();
+
             _panelHolder.transform.DOScale(Vector3.zero, _animationDelay).OnComplete(() =>
             {
                 Destroy(gameObject);

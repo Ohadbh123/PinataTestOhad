@@ -10,11 +10,13 @@ namespace Managers
         const float FADE_TIME = 2f;
         private float _fading;
         private AudioSource _current;
+        private float _maxVolume = 1;
+        [SerializeField] private AudioSource _uiButtonAudio;
 
         public void Play(AudioSource audioSource)
         {         
             _current = audioSource;
-
+            _maxVolume = audioSource.volume;
             _current.clip = audioSource.clip;
             _current.loop = false; 
             _current.volume = 0;
@@ -53,9 +55,19 @@ namespace Managers
 
             if (_current) _current.volume = logFraction;
 
-            if (!(fraction >= 1)) return;
+            if (!(fraction >= _maxVolume)) return;
             
             _fading = 0.0f;
+        }
+
+        public void Stop(AudioSource audioSource)
+        {
+            audioSource.Stop();
+        }
+
+        public void PlayButtonSound()
+        {
+            _uiButtonAudio.Play();
         }
 
         private float ToLogarithmicFraction(float fraction) 
