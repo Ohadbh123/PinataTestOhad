@@ -1208,6 +1208,10 @@ PrefabInstance:
       propertyPath: _cannonConfig
       value: 
       objectReference: {fileID: 11400000, guid: 6f15f01d3a3e45340bf0717fabc33e56, type: 2}
+    - target: {fileID: 5942407715788289320, guid: b3d9d40511eed694c8025c014a6f531d, type: 3}
+      propertyPath: _movementMaxPosition
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7465806700919020958, guid: b3d9d40511eed694c8025c014a6f531d, type: 3}
       propertyPath: m_Name
       value: Cannon (1)
@@ -1551,6 +1555,10 @@ PrefabInstance:
       propertyPath: _cannonConfig
       value: 
       objectReference: {fileID: 11400000, guid: 0dfe4d2354e1de64da0f1e022abd7312, type: 2}
+    - target: {fileID: 5942407715788289320, guid: b3d9d40511eed694c8025c014a6f531d, type: 3}
+      propertyPath: _movementMaxPosition
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7465806700919020958, guid: b3d9d40511eed694c8025c014a6f531d, type: 3}
       propertyPath: m_Name
       value: Cannon (1)

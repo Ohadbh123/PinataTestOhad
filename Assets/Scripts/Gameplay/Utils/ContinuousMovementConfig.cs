@@ -16,17 +16,16 @@ namespace Gameplay.Utils
     public class ContinuousMovementConfig : ScriptableObject
     {
         public ContinuousMovementType startupContinuousMovementType;
-        public float MovementMaxPosition;
         public bool _xAxis;
 
-        public void SetCannonContinuousMovement(Transform cannonTransform, float speed)
+        public void SetCannonContinuousMovement(Transform cannonTransform, float speed, float movementMaxPosition)
         {
             switch (startupContinuousMovementType)
             {
                 case ContinuousMovementType.YoYo:
                     var newPosYoyo = _xAxis
-                        ? new Vector2(cannonTransform.position.x, MovementMaxPosition)
-                        : new Vector2(MovementMaxPosition, cannonTransform.position.y);
+                        ? new Vector2(cannonTransform.position.x, movementMaxPosition)
+                        : new Vector2(movementMaxPosition, cannonTransform.position.y);
 
                     
                     cannonTransform.DOMove(newPosYoyo, speed).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);

@@ -15,6 +15,7 @@ namespace Gameplay
         [SerializeField] private Collider2D _collider2D;
         [SerializeField] private GameObject _activeCannonMarker;
         [SerializeField] private AudioSource _fireSfx;
+        [SerializeField] private float _movementMaxPosition;
 
         private bool _isAvailableToShoot;
         private bool _wasDeactivated;
@@ -26,7 +27,7 @@ namespace Gameplay
             // is Continuous movement required
             if (_cannonConfig.ContinuousMovementConfig != null)
             {
-                _cannonConfig.ContinuousMovementConfig.SetCannonContinuousMovement(transform, _cannonConfig.MovementSpeed);
+                _cannonConfig.ContinuousMovementConfig.SetCannonContinuousMovement(transform, _cannonConfig.MovementSpeed, _movementMaxPosition);
             }
         }
 

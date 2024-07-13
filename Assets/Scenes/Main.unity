@@ -2720,6 +2720,12 @@ MonoBehaviour:
     LevelPrefab: {fileID: 7065394447777426478, guid: 9609afde0df5a8b48913fd8c814919c8, type: 3}
   - LevelData: {fileID: 11400000, guid: 366f92f9a24c3394f99fee488cc1eab1, type: 2}
     LevelPrefab: {fileID: 7065394447777426478, guid: 38dcd073175d96b4eb2456ce34e0b986, type: 3}
+  - LevelData: {fileID: 11400000, guid: 7f9ffeafad474d543b0081adab72bf57, type: 2}
+    LevelPrefab: {fileID: 7065394447777426478, guid: b61b80af8b919974cb694b0d5329cab9, type: 3}
+  - LevelData: {fileID: 11400000, guid: 31234532f9e6d9e44a35b736f17cf10b, type: 2}
+    LevelPrefab: {fileID: 7065394447777426478, guid: 7c9301a3912d69444b744831c91bb1d5, type: 3}
+  - LevelData: {fileID: 11400000, guid: 28019e31f08cfc149b456bc739c5fc9c, type: 2}
+    LevelPrefab: {fileID: 7065394447777426478, guid: ba4d4e2d0c413dc44a3f8c42828c46b1, type: 3}
   _levelHolder: {fileID: 2023451133}
   _animationDelay: 0.1
   _starsAmountText: {fileID: 1424510236}
