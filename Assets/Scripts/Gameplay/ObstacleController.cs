@@ -10,6 +10,7 @@ namespace Gameplay
         [SerializeField] private ContinuousMovementConfig _continuousMovementConfig;
         [SerializeField] private float _movementSpeed;
         [SerializeField] private float _movementMaxPosition;
+        [SerializeField] private bool _isDestroyable;
 
         private void Start()
         {
@@ -19,9 +20,10 @@ namespace Gameplay
             }
         }
 
-        public void TakeDamage()
+        public void TakeDamage(Transform collisionPosition)
         {
-            Instantiate(_damageVfx, transform.position, Quaternion.identity);
+            Instantiate(_damageVfx, collisionPosition.position, Quaternion.identity);
+            if (!_isDestroyable) return;
             Destroy(gameObject);
         }
     }

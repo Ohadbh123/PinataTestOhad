@@ -1,4 +1,5 @@
 using System.Collections;
+using Gameplay.Data;
 using Gameplay.Interfaces;
 using Managers;
 using UnityEngine;
@@ -24,6 +25,7 @@ namespace Gameplay
         {
             _isAvailableToShoot = _cannonConfig.CanShootOnStartup;
             _activeCannonMarker.SetActive(_isAvailableToShoot);
+            GameManager.Instance.InputButtonAddListener(TryShootProjectile);
             // is Continuous movement required
             if (_cannonConfig.ContinuousMovementConfig != null)
             {
@@ -31,7 +33,7 @@ namespace Gameplay
             }
         }
 
-        private void OnMouseDown()
+        private void TryShootProjectile()
         {
             if (!_isAvailableToShoot) return;
             
@@ -81,6 +83,11 @@ namespace Gameplay
             _cannonConfig.TurnCannonOnHit(transform);
             ResetCannon();
             projectileController.DestroyProjectile();
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.InputButtonRemoveListener(TryShootProjectile);
         }
     }
 }

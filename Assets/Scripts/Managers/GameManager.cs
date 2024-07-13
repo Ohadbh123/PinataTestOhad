@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using Infrastructure;
 using TMPro;
 using UI;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Managers
@@ -16,6 +18,7 @@ namespace Managers
         
         [SerializeField] private Button _playButton;
         [SerializeField] private Button _settingsButton;
+        [SerializeField] private Button _inputButton;
         [SerializeField] private GameObject _levelCompletePopup;
         [SerializeField] private GameObject _settingsPopup;
         
@@ -50,6 +53,7 @@ namespace Managers
         {
             _levelSelector.UpdateLevelCompleted(coinCount);
             _levelSelector.UpdateStarsAmount();
+            AudioManager.Instance.Stop(_levelThemeSound);
             StartCoroutine(LoadLevelCompletedPopup(coinCount));
         }
 
@@ -60,11 +64,13 @@ namespace Managers
 
         public void LoadNextLevel()
         {
+            AudioManager.Instance.PlayWithDelay(2f,_levelThemeSound);
             _levelSelector.LoadNextLevel();
         }
 
         public void LoadLevelSelector()
         {
+            _inputButton.gameObject.SetActive(false);
             _levelSelector.LoadLevelSelector();
         }
 
@@ -77,6 +83,26 @@ namespace Managers
         {
             SwitchThemeMusic(gameState);
             _gameState = gameState;
+            
+            switch (gameState)
+            {
+                case GameState.MainScreen:
+                    _inputButton.gameObject.SetActive(false);
+                    break;
+                case GameState.Level:
+                    _inputButton.gameObject.SetActive(true);
+                    break;
+            }
+        }
+
+        public void InputButtonAddListener(UnityAction action)
+        {
+            _inputButton.onClick.AddListener(action);
+        }
+        
+        public void InputButtonRemoveListener(UnityAction action)
+        {
+            _inputButton.onClick.RemoveListener(action);
         }
 
         private IEnumerator LoadLevelCompletedPopup(int coinCount)
@@ -94,10 +120,12 @@ namespace Managers
             switch (gameState)
             {
                 case GameState.MainScreen:
+                    _inputButton.gameObject.SetActive(false);
                     AudioManager.Instance.Play(_mainThemeSound);
                     AudioManager.Instance.Stop(_levelThemeSound);
                     break;
                 case GameState.Level:
+                    _inputButton.gameObject.SetActive(true);
                     AudioManager.Instance.PlayWithDelay(2f,_levelThemeSound);
                     AudioManager.Instance.Stop(_mainThemeSound);
                     break;
@@ -108,6 +136,12 @@ namespace Managers
         public void ResetProgress()
         {
             _levelSelector.ResetProgress();
+        }
+
+        private void OnDestroy()
+        {
+            _playButton.onClick.RemoveListener(OnPlayButtonClicked);
+            _settingsButton.onClick.RemoveListener(OnSettingsButtonClicked);
         }
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Managers
+namespace Gameplay.Data
 {
     [CreateAssetMenu(menuName = "Config/Level Data File")]
 

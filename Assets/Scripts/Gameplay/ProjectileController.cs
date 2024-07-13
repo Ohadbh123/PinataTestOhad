@@ -52,7 +52,7 @@ namespace Gameplay
             
             if (col.TryGetComponent(out IDamageable damageable))
             {
-                damageable.TakeDamage();
+                damageable.TakeDamage(transform);
                 DestroyProjectile();
             }
         }

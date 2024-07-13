@@ -50,6 +50,7 @@ MonoBehaviour:
   _continuousMovementConfig: {fileID: 0}
   _movementSpeed: 0
   _movementMaxPosition: 0
+  _isDestroyable: 1
 --- !u!61 &4095190671535910032
 BoxCollider2D:
   m_ObjectHideFlags: 0

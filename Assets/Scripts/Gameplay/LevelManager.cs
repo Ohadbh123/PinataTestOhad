@@ -1,9 +1,10 @@
-using Gameplay;
+using Gameplay.Data;
+using Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Managers
+namespace Gameplay
 {
     public class LevelManager : MonoBehaviour
     {

@@ -2,7 +2,7 @@ using DG.Tweening;
 using Gameplay.Utils;
 using UnityEngine;
 
-namespace Gameplay
+namespace Gameplay.Data
 {
     public enum MovementType
     {
