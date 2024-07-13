@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageVfx: {fileID: 6167861002886358385, guid: 647ebb4a66cc095459226c9a3ede9a67, type: 3}
+  _continuousMovementConfig: {fileID: 0}
+  _movementSpeed: 0
+  _movementMaxPosition: 0
 --- !u!61 &4095190671535910032
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -168,12 +171,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -1234196435, guid: 2138ff4a12b57be4f8cb89d05c703ee9, type: 3}
+  m_Sprite: {fileID: 1921617550, guid: 2138ff4a12b57be4f8cb89d05c703ee9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.59, y: 2.18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

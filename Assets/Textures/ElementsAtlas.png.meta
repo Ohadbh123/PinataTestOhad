@@ -113,12 +113,12 @@ TextureImporter:
       name: ElementsAtlas_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 732
-        width: 272
-        height: 282
+        x: 6
+        y: 216
+        width: 276
+        height: 286
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: ElementsAtlas_1
       rect:
         serializedVersion: 2
-        x: 299
-        y: 748
-        width: 270
-        height: 268
+        x: 288
+        y: 294
+        width: 159
+        height: 218
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: ElementsAtlas_2
       rect:
         serializedVersion: 2
-        x: 584
-        y: 748
-        width: 272
-        height: 268
+        x: 8
+        y: 72
+        width: 118
+        height: 131
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,279 +168,6 @@ TextureImporter:
       bones: []
       spriteID: 025f2e1334151ca4dbf3001b3c2952d5
       internalID: 966761137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_3
-      rect:
-        serializedVersion: 2
-        x: 870
-        y: 888
-        width: 120
-        height: 132
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 560484854cc1b7d4caf27bf72b5cde5c
-      internalID: 475442843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_5
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 468
-        width: 204
-        height: 264
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af19664b0c0ed104295c0b1733adc0a0
-      internalID: 749773643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_6
-      rect:
-        serializedVersion: 2
-        x: 797
-        y: 572
-        width: 198
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cfc4dc6a975d62469697b6c7295fbf0
-      internalID: 853798392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_7
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 446
-        width: 272
-        height: 274
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d85c71549ae8a041894abc141e16657
-      internalID: 393100954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_8
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 447
-        width: 270
-        height: 268
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f92adbbb4dd6b594c9661d353c00b9e4
-      internalID: -1198776680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_11
-      rect:
-        serializedVersion: 2
-        x: 792
-        y: 366
-        width: 168
-        height: 190
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 223a6c95f04981f42b9b5972400e4bda
-      internalID: 827817635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_19
-      rect:
-        serializedVersion: 2
-        x: 570
-        y: 243
-        width: 158
-        height: 208
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bc0ac1e4256d354d81d9ec306c6c23f
-      internalID: -1234196435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_22
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 162
-        width: 272
-        height: 268
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 556154d0fac3d534cb6cb1cfa0e49798
-      internalID: 338381336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_23
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 173
-        width: 254
-        height: 258
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6fc4097d34c14748b625d632fa41955
-      internalID: -1084476771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_28
-      rect:
-        serializedVersion: 2
-        x: 579
-        y: 0
-        width: 189
-        height: 236
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 516d124022118f849830095424e5ce96
-      internalID: 1027961796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_29
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 16
-        width: 134
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31ad2a65adb78244587f7c85a1366d5e
-      internalID: -1610460090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_31
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 18
-        width: 115
-        height: 132
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 338060a6e06d5cf49877f913ca3f5809
-      internalID: 1562770032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ElementsAtlas_34
-      rect:
-        serializedVersion: 2
-        x: 690
-        y: 0
-        width: 18
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a5ebf4e3eca03846a87f6cd83669e29
-      internalID: 901123341
       vertices: []
       indices: 
       edges: []
@@ -458,39 +185,10 @@ TextureImporter:
     nameFileIdTable:
       ElementsAtlas_0: -1414855342
       ElementsAtlas_1: 1921617550
-      ElementsAtlas_10: 956802487
-      ElementsAtlas_11: 827817635
-      ElementsAtlas_12: 2085744694
-      ElementsAtlas_13: 952615545
-      ElementsAtlas_14: 2040828980
-      ElementsAtlas_15: -1471007652
-      ElementsAtlas_16: 47923296
-      ElementsAtlas_17: -295337537
-      ElementsAtlas_18: 123795237
-      ElementsAtlas_19: -1234196435
       ElementsAtlas_2: 966761137
-      ElementsAtlas_20: -2031268303
-      ElementsAtlas_21: 276933660
-      ElementsAtlas_22: 338381336
-      ElementsAtlas_23: -1084476771
-      ElementsAtlas_24: 567665439
-      ElementsAtlas_25: -257467801
-      ElementsAtlas_26: -292168742
-      ElementsAtlas_27: -2097096921
-      ElementsAtlas_28: 1027961796
-      ElementsAtlas_29: -1610460090
       ElementsAtlas_3: 475442843
-      ElementsAtlas_30: -739169884
-      ElementsAtlas_31: 1562770032
-      ElementsAtlas_32: 1030512739
-      ElementsAtlas_33: -1623796461
-      ElementsAtlas_34: 901123341
       ElementsAtlas_4: 104757253
       ElementsAtlas_5: 749773643
-      ElementsAtlas_6: 853798392
-      ElementsAtlas_7: 393100954
-      ElementsAtlas_8: -1198776680
-      ElementsAtlas_9: 559414638
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

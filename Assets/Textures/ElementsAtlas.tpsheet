@@ -9,22 +9,10 @@
 #
 :format=40300
 :texture=ElementsAtlas.png
-:size=1024x1024
+:size=512x512
 :pivotpoints=enabled
 :borders=disabled
 
-pinata-icon-Basic.png;8;731;275;285; 0.5;0.5; 0;0;0;0
-seasonal-sticker-icon.png;8;446;270;269; 0.5;0.5; 0;0;0;0
-adventure-sticker-icon.png;299;748;270;268; 0.5;0.5; 0;0;0;0
-any-sticker-icon.png;8;162;270;268; 0.5;0.5; 0;0;0;0
-silver-or-gold-sticker-icon.png;294;447;270;268; 0.5;0.5; 0;0;0;0
-silver-sticker-icon.png;585;748;270;268; 0.5;0.5; 0;0;0;0
-gem_cupid_heart_purple.png;8;15;136;131; 0.5;0.5; 0;0;0;0
-white-sticker-icon.png;294;163;270;268; 0.5;0.5; 0;0;0;0
-magic-wand-card.png;580;468;201;264; 0.5;0.5; 0;0;0;0
-gem_bomb_purple.png;871;889;120;127; 0.5;0.5; 0;0;0;0
-gem_lightning_purple.png;160;19;116;127; 0.5;0.5; 0;0;0;0
-firecracker-card.png;580;243;149;209; 0.5;0.5; 0;0;0;0
-laser-beam-card.png;797;572;198;160; 0.5;0.5; 0;0;0;0
-detonator-card.png;580;32;185;195; 0.5;0.5; 0;0;0;0
-rubber-ducky-card.png;797;367;161;189; 0.5;0.5; 0;0;0;0
+pinata-icon-Basic.png;8;219;275;285; 0.5;0.5; 0;0;0;0
+firecracker-card.png;299;295;149;209; 0.5;0.5; 0;0;0;0
+gem_bomb_purple.png;8;76;120;127; 0.5;0.5; 0;0;0;0

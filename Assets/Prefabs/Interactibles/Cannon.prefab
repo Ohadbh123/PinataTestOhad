@@ -255,12 +255,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 475442843, guid: 2138ff4a12b57be4f8cb89d05c703ee9, type: 3}
+  m_Sprite: {fileID: 966761137, guid: 2138ff4a12b57be4f8cb89d05c703ee9, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 1
   m_DrawMode: 0
-  m_Size: {x: 1.2, y: 1.32}
+  m_Size: {x: 1.18, y: 1.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -643,6 +643,7 @@ MonoBehaviour:
   _collider2D: {fileID: 7113429105784552487}
   _activeCannonMarker: {fileID: 1782361971913634415}
   _fireSfx: {fileID: 2945528513100774464}
+  _movementMaxPosition: 0
 --- !u!61 &7113429105784552487
 BoxCollider2D:
   m_ObjectHideFlags: 0
