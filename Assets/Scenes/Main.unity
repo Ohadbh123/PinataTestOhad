@@ -1363,7 +1363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -224, y: -246}
+  m_AnchoredPosition: {x: -241, y: -246}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &693898573
@@ -2809,17 +2809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4beb3c36899b6d8478202fb3849f75d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _closeButton: {fileID: 881419117}
-  _levelsButtons:
-  - {fileID: 2035029595}
-  - {fileID: 1445651815}
-  - {fileID: 1646821578}
-  - {fileID: 1091122957}
-  - {fileID: 858983769}
-  - {fileID: 1839391624}
-  - {fileID: 206612370}
-  - {fileID: 1848014277}
-  - {fileID: 237571981}
   _levels:
   - LevelData: {fileID: 11400000, guid: 0b57bcd66a1128f479e6af460e4be381, type: 2}
     LevelPrefab: {fileID: 7065394447777426478, guid: a240c0d0ad5461f44be96ef013ca5af2, type: 3}
@@ -2839,9 +2828,20 @@ MonoBehaviour:
     LevelPrefab: {fileID: 7065394447777426478, guid: be85f3d703450484986552efb33795ac, type: 3}
   - LevelData: {fileID: 11400000, guid: 0ec432085f1a4054380bac023ad97ec3, type: 2}
     LevelPrefab: {fileID: 7065394447777426478, guid: 53085a5519f0033499fd9ed04f6c08cb, type: 3}
+  _levelsButtons:
+  - {fileID: 2035029595}
+  - {fileID: 1445651815}
+  - {fileID: 1646821578}
+  - {fileID: 1091122957}
+  - {fileID: 858983769}
+  - {fileID: 1839391624}
+  - {fileID: 206612370}
+  - {fileID: 1848014277}
+  - {fileID: 237571981}
   _levelHolder: {fileID: 2023451133}
-  _animationDelay: 0.1
   _starsAmountText: {fileID: 1424510236}
+  _closeButton: {fileID: 881419117}
+  _animationDelay: 0.1
 --- !u!1 &1202069119
 GameObject:
   m_ObjectHideFlags: 0
