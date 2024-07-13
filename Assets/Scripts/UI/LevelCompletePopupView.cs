@@ -5,21 +5,17 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class LevelCompletePopupView : MonoBehaviour
+    public class LevelCompletePopupView : PopupBaseView
     {
         [SerializeField] private RectTransform [] _starsHolders;
         [SerializeField] private RectTransform _youWinText;
-        [SerializeField] private Button _closeButton;
         [SerializeField] private Button _nextLevelButton;
-        [SerializeField] private float _animationDelay = 0.5f;
         
         private Sequence _tweenSequence;
 
-        private void Start()
+        protected override void Start()
         {
-            transform.localScale = Vector3.zero;
-            transform.DOScale(Vector3.one, _animationDelay);
-            _closeButton.onClick.AddListener(OnCloseButtonPressed);
+            base.Start();
             _nextLevelButton.onClick.AddListener(LoadNextLevel);
         }
 
@@ -43,9 +39,9 @@ namespace UI
                 (_nextLevelButton.transform.DOScale(Vector3.one / 2, _animationDelay));
         }
 
-        private void OnCloseButtonPressed()
+        protected override void OnCloseButtonPressed()
         {
-            transform.DOScale(Vector3.zero, _animationDelay).OnComplete(() =>
+            _panelHolder.transform.DOScale(Vector3.zero, _animationDelay).OnComplete(() =>
             {
                 GameManager.Instance.LoadLevelSelector();
                 Destroy(gameObject);
@@ -54,16 +50,16 @@ namespace UI
 
         private void LoadNextLevel()
         {
-            transform.DOScale(Vector3.zero, _animationDelay).OnComplete(() =>
+            _panelHolder.transform.DOScale(Vector3.zero, _animationDelay).OnComplete(() =>
             {
                 GameManager.Instance.LoadNextLevel();
                 Destroy(gameObject);
             });
         }
 
-        private void OnDestroy()
+        protected virtual void OnDestroy()
         {
-            _closeButton.onClick.RemoveListener(OnCloseButtonPressed);
+            base.OnDestroy();
             _nextLevelButton.onClick.RemoveListener(LoadNextLevel);
         }
     }

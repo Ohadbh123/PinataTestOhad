@@ -9,6 +9,7 @@ namespace Gameplay
         None,
         Rotate90,
         Rotate180,
+        Rotate360
     }
     
     [CreateAssetMenu(menuName = "Config/Cannon Config File")]
@@ -33,6 +34,11 @@ namespace Gameplay
                 case MovementType.Rotate180:
                     var newPosRot180 = new Vector3(0, 0, 180);
                     cannonTransform.DORotate(newPosRot180, MovementSpeed, RotateMode.FastBeyond360)
+                        .SetEase(Ease.InOutSine);
+                    break;
+                case MovementType.Rotate360:
+                    var newPosRot360 = new Vector3(0, 0, 360);
+                    cannonTransform.DORotate(newPosRot360, MovementSpeed, RotateMode.FastBeyond360)
                         .SetEase(Ease.InOutSine);
                     break;
             }

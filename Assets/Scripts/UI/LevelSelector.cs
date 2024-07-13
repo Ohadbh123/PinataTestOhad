@@ -48,9 +48,15 @@ namespace UI
         {
             if (_currentLevel != null)
             {
-                Destroy(_currentLevel.gameObject);
+                _currentLevel.KillLevel();
                 _currentLevel = null;
             }
+        }
+        
+        public void RestartLevel()
+        {
+            KillCurrentLevel();
+            _currentLevel = Instantiate(_levels[_currentLevelIndex].gameObject, _levelHolder).GetComponent<LevelManager>();
         }
 
         public void LoadLevelSelector()
@@ -87,6 +93,8 @@ namespace UI
             }
             _closeButton.onClick.RemoveListener(CloseLevelSelector);
         }
+
+      
     }
 }
 

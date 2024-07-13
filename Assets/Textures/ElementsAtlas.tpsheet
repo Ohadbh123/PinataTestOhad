@@ -13,18 +13,18 @@
 :pivotpoints=enabled
 :borders=disabled
 
-adventure-sticker-icon.png;3;753;270;268; 0.5;0.5; 0;0;0;0
-seasonal-sticker-icon.png;3;478;270;269; 0.5;0.5; 0;0;0;0
-any-sticker-icon.png;279;753;270;268; 0.5;0.5; 0;0;0;0
-silver-or-gold-sticker-icon.png;3;204;270;268; 0.5;0.5; 0;0;0;0
-silver-sticker-icon.png;279;479;270;268; 0.5;0.5; 0;0;0;0
-white-sticker-icon.png;555;753;270;268; 0.5;0.5; 0;0;0;0
-detonator-card.png;3;3;185;195; 0.5;0.5; 0;0;0;0
-magic-wand-card.png;279;209;201;264; 0.5;0.5; 0;0;0;0
-laser-beam-card.png;555;587;198;160; 0.5;0.5; 0;0;0;0
-rubber-ducky-card.png;831;832;161;189; 0.5;0.5; 0;0;0;0
-gem_color_crystal_purple.png;194;59;118;139; 0.5;0.5; 0;0;0;0
-firecracker-card.png;486;264;149;209; 0.5;0.5; 0;0;0;0
-gem_cupid_heart_purple.png;759;616;136;131; 0.5;0.5; 0;0;0;0
-gem_bomb_purple.png;318;76;120;127; 0.5;0.5; 0;0;0;0
-gem_lightning_purple.png;486;131;116;127; 0.5;0.5; 0;0;0;0
+pinata-icon-Basic.png;8;731;275;285; 0.5;0.5; 0;0;0;0
+seasonal-sticker-icon.png;8;446;270;269; 0.5;0.5; 0;0;0;0
+adventure-sticker-icon.png;299;748;270;268; 0.5;0.5; 0;0;0;0
+any-sticker-icon.png;8;162;270;268; 0.5;0.5; 0;0;0;0
+silver-or-gold-sticker-icon.png;294;447;270;268; 0.5;0.5; 0;0;0;0
+silver-sticker-icon.png;585;748;270;268; 0.5;0.5; 0;0;0;0
+gem_cupid_heart_purple.png;8;15;136;131; 0.5;0.5; 0;0;0;0
+white-sticker-icon.png;294;163;270;268; 0.5;0.5; 0;0;0;0
+magic-wand-card.png;580;468;201;264; 0.5;0.5; 0;0;0;0
+gem_bomb_purple.png;871;889;120;127; 0.5;0.5; 0;0;0;0
+gem_lightning_purple.png;160;19;116;127; 0.5;0.5; 0;0;0;0
+firecracker-card.png;580;243;149;209; 0.5;0.5; 0;0;0;0
+laser-beam-card.png;797;572;198;160; 0.5;0.5; 0;0;0;0
+detonator-card.png;580;32;185;195; 0.5;0.5; 0;0;0;0
+rubber-ducky-card.png;797;367;161;189; 0.5;0.5; 0;0;0;0

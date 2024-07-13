@@ -85,7 +85,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.28
 --- !u!1 &3000801509228139997
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0336, y: -0.0364, z: 0.14}
-  m_LocalScale: {x: 0.30622238, y: 0.3062224, z: 0.3062224}
+  m_LocalScale: {x: 0.27374136, y: 0.2737414, z: 0.2737414}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5103692258035999017}
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 5e4d64e1cfc76054f8b5f44bf9bbdc4b, type: 3}
-  m_Color: {r: 0.6330962, g: 0, b: 1, a: 0.5254902}
+  m_Color: {r: 1, g: 0.4895674, b: 0, a: 0.5254902}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -198,15 +198,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6037624664462152473, guid: 6afd7b5b87bcdab40958c368402a6f10, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6037624664462152473, guid: 6afd7b5b87bcdab40958c368402a6f10, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6037624664462152473, guid: 6afd7b5b87bcdab40958c368402a6f10, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6037624664462152473, guid: 6afd7b5b87bcdab40958c368402a6f10, type: 3}
       propertyPath: m_LocalPosition.x

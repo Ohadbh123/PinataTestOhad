@@ -114,8 +114,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 143
-        width: 574
+        y: 142
+        width: 572
         height: 878
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -136,7 +136,7 @@ TextureImporter:
         serializedVersion: 2
         x: 575
         y: 155
-        width: 482
+        width: 478
         height: 866
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -189,69 +189,6 @@ TextureImporter:
       bones: []
       spriteID: 17e3f68c7fea18446b463c241ed84c94
       internalID: -813569147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PinataAtlas_4
-      rect:
-        serializedVersion: 2
-        x: 1692
-        y: 624
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d38f63f4e79aad4d8054e7a2772692f
-      internalID: 1688734464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PinataAtlas_5
-      rect:
-        serializedVersion: 2
-        x: 1548
-        y: 492
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0519bd9ff7df5948a6fb9615fede903
-      internalID: -1257917044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PinataAtlas_6
-      rect:
-        serializedVersion: 2
-        x: 564
-        y: 408
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56e81c49df2e51b489ec12b5b2f0b364
-      internalID: 367972239
       vertices: []
       indices: 
       edges: []

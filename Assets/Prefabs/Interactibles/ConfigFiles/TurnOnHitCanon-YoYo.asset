@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9ccdfc7fa64de48941e9fbb3051c0d, type: 3}
   m_Name: TurnOnHitCanon-YoYo
   m_EditorClassIdentifier: 
-  OnHitMovementType: 2
+  OnHitMovementType: 3
   ContinuousMovementConfig: {fileID: 11400000, guid: 012605012402e4a4495e799886da2191, type: 2}
   ProjectilePrefab: {fileID: 8246916177889625554, guid: 41946ed5d0743a040b0c96dadc114040, type: 3}
   CanShootOnStartup: 0
-  MovementSpeed: 1.5
-  CooldownTime: 1.5
+  MovementSpeed: 2
+  CooldownTime: 1

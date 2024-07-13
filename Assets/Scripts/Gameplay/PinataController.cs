@@ -19,10 +19,5 @@ namespace Gameplay
             projectileController.DestroyProjectile();
             OnPinataAchieved.Invoke();
         }
-
-        private void OnDestroy()
-        {
-            OnPinataAchieved.RemoveAllListeners();
-        }
     }
 }

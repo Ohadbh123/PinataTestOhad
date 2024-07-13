@@ -75,6 +75,11 @@ namespace Managers
             StartCoroutine(LoadLevelCompletedPopup(coinCount));
         }
 
+        public void RestartLevel()
+        {
+            _levelSelector.RestartLevel();
+        }
+
         public void LoadNextLevel()
         {
             _levelSelector.LoadNextLevel();

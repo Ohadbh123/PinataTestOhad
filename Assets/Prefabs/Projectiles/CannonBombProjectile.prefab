@@ -49,9 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 4912634094249705125}
   _projectileConfig: {fileID: 11400000, guid: 4d0322e9dbde47243bbfeb624360d825, type: 2}
-  OnProjectileInteractibleHit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!50 &4912634094249705125
 Rigidbody2D:
   serializedVersion: 4
@@ -188,12 +185,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 952615545, guid: 2138ff4a12b57be4f8cb89d05c703ee9, type: 3}
+  m_Sprite: {fileID: 475442843, guid: 2138ff4a12b57be4f8cb89d05c703ee9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2, y: 1.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -211,4 +208,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adde87a7ca0d46e3b5cfbaa3179aee4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.3
+  _speed: 0.5
