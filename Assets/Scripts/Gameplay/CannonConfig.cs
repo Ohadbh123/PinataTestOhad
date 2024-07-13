@@ -20,6 +20,7 @@ namespace Gameplay
         public GameObject ProjectilePrefab;
         public bool CanShootOnStartup;
         public float MovementSpeed;
+        public float TurnMovementSpeed;
         public float CooldownTime;
 
         public void TurnCannonOnHit(Transform cannonTransform)
@@ -28,17 +29,17 @@ namespace Gameplay
             {
                 case MovementType.Rotate90:
                     var newPosRot90 = new Vector3(0, 0, 90);
-                    cannonTransform.DORotate(newPosRot90, MovementSpeed, RotateMode.FastBeyond360)
+                    cannonTransform.DORotate(newPosRot90, TurnMovementSpeed, RotateMode.FastBeyond360)
                         .SetEase(Ease.InOutSine);
                     break;
                 case MovementType.Rotate180:
                     var newPosRot180 = new Vector3(0, 0, 180);
-                    cannonTransform.DORotate(newPosRot180, MovementSpeed, RotateMode.FastBeyond360)
+                    cannonTransform.DORotate(newPosRot180, TurnMovementSpeed, RotateMode.FastBeyond360)
                         .SetEase(Ease.InOutSine);
                     break;
                 case MovementType.Rotate360:
                     var newPosRot360 = new Vector3(0, 0, 360);
-                    cannonTransform.DORotate(newPosRot360, MovementSpeed, RotateMode.FastBeyond360)
+                    cannonTransform.DORotate(newPosRot360, TurnMovementSpeed, RotateMode.FastBeyond360)
                         .SetEase(Ease.InOutSine);
                     break;
             }

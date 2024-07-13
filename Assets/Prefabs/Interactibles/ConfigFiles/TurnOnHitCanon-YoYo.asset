@@ -17,4 +17,5 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 8246916177889625554, guid: 41946ed5d0743a040b0c96dadc114040, type: 3}
   CanShootOnStartup: 0
   MovementSpeed: 2
+  TurnMovementSpeed: 0.5
   CooldownTime: 1
