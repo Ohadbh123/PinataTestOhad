@@ -21,7 +21,7 @@ namespace Managers
         {
             SetupButtonListeners();
             transform.localScale = Vector3.zero;
-            _closeButton.onClick.AddListener(CloseLevelSelector);
+            _closeButton.onClick.AddListener(LoadMainScreen);
         }
 
         private void CloseLevelSelector()
@@ -83,6 +83,12 @@ namespace Managers
                 _levelsButtons[i].SetLevelIndex(i + 1);
                 _levelsButtons[i].AddButtonListener(LoadLevel , i);
             }
+        }
+        
+        private void LoadMainScreen()
+        {
+            CloseLevelSelector();
+            GameManager.Instance.LoadMainContent(true);
         }
         
         private void OnDestroy()

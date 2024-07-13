@@ -12,21 +12,19 @@ namespace Managers
         [SerializeField] private Transform _canvas;
         [SerializeField] private GameObject _levelCompletePopup;
         [SerializeField] private LevelSelector _levelSelector;
-        [SerializeField] private Button _PlayButton;
+        [SerializeField] private Button _playButton;
+        [SerializeField] private Transform _mainContent;
 
         private int _starsAmount;
         
         private void Start()
         {
-            _PlayButton.onClick.AddListener(OnPlayButtonClicked);
+            _playButton.onClick.AddListener(OnPlayButtonClicked);
         }
 
         private void OnPlayButtonClicked()
         {
-            _PlayButton.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() =>
-            {
-                _PlayButton.gameObject.SetActive(false);
-            });
+            LoadMainContent(false);
             LoadLevelSelector();
         }
 
@@ -54,6 +52,11 @@ namespace Managers
         public void LoadLevelSelector()
         {
             _levelSelector.LoadLevelSelector();
+        }
+
+        public void LoadMainContent(bool load)
+        {
+            _mainContent.transform.DOScale(load? Vector3.one : Vector3.zero, 0.5f);
         }
 
         private IEnumerator LoadLevelCompletedPopup(int coinCount)
