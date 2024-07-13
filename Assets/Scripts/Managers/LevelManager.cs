@@ -1,4 +1,3 @@
-using System;
 using Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,8 +7,9 @@ namespace Managers
     public class LevelManager : MonoBehaviour
     {
         [SerializeField] private Button _restartButton;
+        [SerializeField] private AudioSource _levelIntroSound;
         [SerializeField] private PinataController _pinataController;
-        [SerializeField] private CoinController []  _coinControllers;
+        [SerializeField] private CoinController [] _coinControllers;
 
         private int _coinCount;
 
@@ -17,6 +17,7 @@ namespace Managers
         {
             _pinataController.OnPinataAchieved.AddListener(OnLevelCompleted);
             _restartButton.onClick.AddListener(RestartLevel);
+            AudioManager.Instance.PlayWithDelay(.7f,_levelIntroSound);
             
             foreach (var controller in _coinControllers)
             {

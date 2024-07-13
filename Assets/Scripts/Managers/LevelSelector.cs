@@ -1,9 +1,9 @@
 using DG.Tweening;
-using Managers;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace Managers
 {
     public class LevelSelector : MonoBehaviour
     {

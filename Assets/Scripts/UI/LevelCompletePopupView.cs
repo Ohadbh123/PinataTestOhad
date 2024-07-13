@@ -10,12 +10,14 @@ namespace UI
         [SerializeField] private RectTransform [] _starsHolders;
         [SerializeField] private RectTransform _youWinText;
         [SerializeField] private Button _nextLevelButton;
+        [SerializeField] private AudioSource _winSound;
         
         private Sequence _tweenSequence;
 
         protected override void Start()
         {
             base.Start();
+            AudioManager.Instance.Play(_winSound);
             _nextLevelButton.onClick.AddListener(LoadNextLevel);
         }
 
@@ -57,7 +59,7 @@ namespace UI
             });
         }
 
-        protected virtual void OnDestroy()
+        protected override void OnDestroy()
         {
             base.OnDestroy();
             _nextLevelButton.onClick.RemoveListener(LoadNextLevel);

@@ -1,6 +1,6 @@
 using System.Collections;
 using Gameplay.Interfaces;
-using Unity.VisualScripting;
+using Managers;
 using UnityEngine;
 
 namespace Gameplay
@@ -14,6 +14,7 @@ namespace Gameplay
         [SerializeField] private Transform _aimTransform;
         [SerializeField] private Collider2D _collider2D;
         [SerializeField] private GameObject _activeCannonMarker;
+        [SerializeField] private AudioSource _fireSfx;
 
         private bool _isAvailableToShoot;
         private bool _wasDeactivated;
@@ -36,6 +37,8 @@ namespace Gameplay
             _animator.SetTrigger(_animatorShootTrigger);
             _collider2D.enabled = false;
             _isAvailableToShoot = false;
+            AudioManager.Instance.Play(_fireSfx);
+
             StartCoroutine("ShootProjectile");
         }
 
