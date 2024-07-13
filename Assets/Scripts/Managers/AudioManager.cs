@@ -8,16 +8,20 @@ namespace Managers
     public class AudioManager : PersistentSingleton<AudioManager>
     {
         const float FADE_TIME = 2f;
+        
+        [SerializeField] private AudioSource _uiButtonAudio;
+
         private float _fading;
         private AudioSource _current;
         private float _maxVolume = 1;
-        [SerializeField] private AudioSource _uiButtonAudio;
 
         public void Play(AudioSource audioSource)
         {         
             _current = audioSource;
             _maxVolume = audioSource.volume;
             _current.clip = audioSource.clip;
+            
+            //Set everything to zero before fading in
             _current.loop = false; 
             _current.volume = 0;
             _current.bypassListenerEffects = true;
@@ -26,6 +30,22 @@ namespace Managers
             _fading = 0.001f;
         }
 
+        public void Stop(AudioSource audioSource)
+        {
+            audioSource.Stop();
+        }
+
+        //handle all UI sound
+        public void PlayButtonSound()
+        {
+            _uiButtonAudio.Play();
+        }
+        
+        private void Update()
+        {
+            HandleCrossFade();
+        }
+        
         public void PlayWithDelay(float delay, AudioSource audioSource)
         {
             StartCoroutine(PlaySoundWithDelay(delay, audioSource));
@@ -37,11 +57,8 @@ namespace Managers
             Play(audioSource);
         }
 
-        private void Update()
-        {
-            HandleCrossFade();
-        }
-
+        
+        //Fade volume intro
         private void HandleCrossFade()
         {
             if (_fading <= 0f) return;
@@ -50,7 +67,6 @@ namespace Managers
 
             var fraction = Mathf.Clamp01(_fading / FADE_TIME);
 
-            //fade
             var logFraction = ToLogarithmicFraction(fraction);
 
             if (_current) _current.volume = logFraction;
@@ -58,16 +74,6 @@ namespace Managers
             if (!(fraction >= _maxVolume)) return;
             
             _fading = 0.0f;
-        }
-
-        public void Stop(AudioSource audioSource)
-        {
-            audioSource.Stop();
-        }
-
-        public void PlayButtonSound()
-        {
-            _uiButtonAudio.Play();
         }
 
         private float ToLogarithmicFraction(float fraction) 

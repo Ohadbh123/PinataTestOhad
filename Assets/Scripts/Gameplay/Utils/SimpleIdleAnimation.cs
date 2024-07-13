@@ -3,10 +3,12 @@ using UnityEngine;
 
 namespace Gameplay.Utils
 {
+    //simple tween for idle aniamtion
     public class SimpleIdleAnimation : MonoBehaviour
     {
         [SerializeField] private float _speed;
-        [SerializeField] private Vector3 _size = Vector3.one/2;
+        [SerializeField] private Vector3 _size = Vector3.one / 2;
+
         private void Start()
         {
             transform.DOScale(_size, _speed)

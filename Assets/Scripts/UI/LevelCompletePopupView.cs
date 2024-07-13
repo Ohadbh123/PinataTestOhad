@@ -7,11 +7,11 @@ namespace UI
 {
     public class LevelCompletePopupView : PopupBaseView
     {
-        [SerializeField] private RectTransform [] _starsHolders;
+        [SerializeField] private RectTransform[] _starsHolders;
         [SerializeField] private RectTransform _youWinText;
         [SerializeField] private Button _nextLevelButton;
         [SerializeField] private AudioSource _winSound;
-        
+
         private Sequence _tweenSequence;
 
         protected override void Start()
@@ -19,26 +19,6 @@ namespace UI
             base.Start();
             AudioManager.Instance.Play(_winSound);
             _nextLevelButton.onClick.AddListener(LoadNextLevel);
-        }
-
-        public void SetStartsAmount(int starsAmount)
-        {
-            _tweenSequence = DOTween.Sequence();
-
-            for (var i = 0; i < starsAmount; i++)
-            {
-                _tweenSequence
-                    .Append(_starsHolders[i]
-                    .DOScale(Vector3.one, _animationDelay))
-                    .SetDelay(_animationDelay);
-            }
-            
-            _tweenSequence.Append
-                    (_youWinText.DOScale(Vector3.one, _animationDelay))
-                .SetDelay(_animationDelay);
-
-            _tweenSequence.Append
-                (_nextLevelButton.transform.DOScale(Vector3.one / 2, _animationDelay));
         }
 
         protected override void OnCloseButtonPressed()
@@ -52,10 +32,31 @@ namespace UI
             });
         }
 
+        //Show how many starts achieved on this level
+        public void SetStartsAmount(int starsAmount)
+        {
+            _tweenSequence = DOTween.Sequence();
+
+            for (var i = 0; i < starsAmount; i++)
+            {
+                _tweenSequence
+                    .Append(_starsHolders[i]
+                        .DOScale(Vector3.one, _animationDelay))
+                    .SetDelay(_animationDelay);
+            }
+
+            _tweenSequence.Append
+                    (_youWinText.DOScale(Vector3.one, _animationDelay))
+                .SetDelay(_animationDelay);
+
+            _tweenSequence.Append
+                (_nextLevelButton.transform.DOScale(Vector3.one / 2, _animationDelay));
+        }
+
         private void LoadNextLevel()
         {
             AudioManager.Instance.PlayButtonSound();
-            
+
             _panelHolder.transform.DOScale(Vector3.zero, _animationDelay).OnComplete(() =>
             {
                 GameManager.Instance.LoadNextLevel();
@@ -66,7 +67,7 @@ namespace UI
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            
+
             _nextLevelButton.onClick.RemoveListener(LoadNextLevel);
         }
     }

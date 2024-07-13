@@ -10,8 +10,8 @@ namespace Gameplay
     {
         private static readonly int _animatorShootTrigger = Animator.StringToHash("Shoot");
 
-        [SerializeField] private Animator _animator;
         [SerializeField] private CannonConfig _cannonConfig;
+        [SerializeField] private Animator _animator;
         [SerializeField] private Transform _aimTransform;
         [SerializeField] private Collider2D _collider2D;
         [SerializeField] private GameObject _activeCannonMarker;
@@ -23,37 +23,56 @@ namespace Gameplay
 
         void Start()
         {
+            //check if this is the first cannon available to use
             _isAvailableToShoot = _cannonConfig.CanShootOnStartup;
+
+            //set the marker for which cannon is active
             _activeCannonMarker.SetActive(_isAvailableToShoot);
+
             GameManager.Instance.InputButtonAddListener(TryShootProjectile);
+
             // is Continuous movement required
             if (_cannonConfig.ContinuousMovementConfig != null)
             {
-                _cannonConfig.ContinuousMovementConfig.SetCannonContinuousMovement(transform, _cannonConfig.MovementSpeed, _movementMaxPosition);
+                _cannonConfig.ContinuousMovementConfig.SetCannonContinuousMovement(transform,
+                    _cannonConfig.MovementSpeed, _movementMaxPosition);
             }
+        }
+
+        //interact with projectile
+        public void Interact(ProjectileController projectileController)
+        {
+            _wasDeactivated = false;
+            _cannonConfig.TurnCannonOnHit(transform);
+            ResetCannon();
+            projectileController.DestroyProjectile();
         }
 
         private void TryShootProjectile()
         {
             if (!_isAvailableToShoot) return;
-            
+
             _animator.SetTrigger(_animatorShootTrigger);
             _collider2D.enabled = false;
             _isAvailableToShoot = false;
+
             AudioManager.Instance.Play(_fireSfx);
 
             StartCoroutine("ShootProjectile");
         }
 
+        //used a coroutine for cooldown between shots
         private IEnumerator ShootProjectile()
         {
-            var projectileController = 
-                Instantiate(_cannonConfig.ProjectilePrefab, _aimTransform.position,Quaternion.identity)
+            var projectileController =
+                Instantiate(_cannonConfig.ProjectilePrefab, _aimTransform.position, Quaternion.identity)
                     .GetComponent<ProjectileController>();
 
             projectileController.SetupProjectileDirection(_aimTransform.up);
+
+            //listen for projectile hit on another cannon - deactivating this one
             projectileController.OnProjectileInteractableHit += DeactivateCannon;
-            
+
             yield return new WaitForSeconds(_cannonConfig.CooldownTime);
 
             ResetCannon();
@@ -67,22 +86,14 @@ namespace Gameplay
             _collider2D.enabled = true;
             _activeCannonMarker.SetActive(false);
         }
-        
+
         private void ResetCannon()
         {
             if (_wasDeactivated) return;
-            
+
             _isAvailableToShoot = true;
             _collider2D.enabled = true;
             _activeCannonMarker.SetActive(true);
-        }
-
-        public void Interact(ProjectileController projectileController)
-        {
-            _wasDeactivated = false;
-            _cannonConfig.TurnCannonOnHit(transform);
-            ResetCannon();
-            projectileController.DestroyProjectile();
         }
 
         private void OnDestroy()

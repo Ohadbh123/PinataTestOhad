@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,7 +10,7 @@ namespace UI
         [SerializeField] private Button _button;
         [SerializeField] private TMP_Text _levelText;
         [SerializeField] private Image _buttomImage;
-       
+
         private Color _baseColor;
 
         private void Awake()
@@ -28,12 +27,13 @@ namespace UI
         {
             _button.onClick.AddListener(delegate { action(levelIndex); });
         }
-    
+
         public void RemoveButtonListener(UnityAction<int> action, int levelIndex)
         {
             _button.onClick.RemoveListener(delegate { action(levelIndex); });
         }
 
+        //Set Button to green if all stars achieved, red for less
         public void SetLevelStatus(int starsAchieved)
         {
             switch (starsAchieved)
@@ -45,7 +45,7 @@ namespace UI
                     ResetButton();
                     return;
                 default:
-                    _buttomImage.color =  Color.red;
+                    _buttomImage.color = Color.red;
                     break;
             }
         }

@@ -11,7 +11,7 @@ namespace Gameplay.Data
         Rotate180,
         Rotate360
     }
-    
+
     [CreateAssetMenu(menuName = "Config/Cannon Config File")]
     public class CannonConfig : ScriptableObject
     {
@@ -23,6 +23,7 @@ namespace Gameplay.Data
         public float TurnMovementSpeed;
         public float CooldownTime;
 
+        //set the movement after projectile hit, if necessary
         public void TurnCannonOnHit(Transform cannonTransform)
         {
             switch (OnHitMovementType)

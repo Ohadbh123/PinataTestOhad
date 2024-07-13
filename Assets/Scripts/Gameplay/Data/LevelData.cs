@@ -3,7 +3,6 @@ using UnityEngine;
 namespace Gameplay.Data
 {
     [CreateAssetMenu(menuName = "Config/Level Data File")]
-
     public class LevelData : ScriptableObject
     {
         private int _starsCollected;

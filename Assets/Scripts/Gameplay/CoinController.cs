@@ -6,10 +6,9 @@ namespace Gameplay
 {
     public class CoinController : MonoBehaviour, ICollectible
     {
-        [HideInInspector]
-        public UnityEvent OnStarAchieved;
-
         [SerializeField] private GameObject _collectVfx;
+
+        [HideInInspector] public UnityEvent OnStarAchieved;
 
         public void Collect()
         {
@@ -17,7 +16,7 @@ namespace Gameplay
             OnStarAchieved.Invoke();
             Destroy(gameObject);
         }
-        
+
         private void OnDestroy()
         {
             OnStarAchieved.RemoveAllListeners();
