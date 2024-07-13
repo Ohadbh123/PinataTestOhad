@@ -18,25 +18,25 @@ namespace Gameplay.Utils
         public ContinuousMovementType startupContinuousMovementType;
         public bool _xAxis;
 
-        public void SetCannonContinuousMovement(Transform cannonTransform, float speed, float movementMaxPosition)
+        public void SetCannonContinuousMovement(Transform ObjectTransform, float speed, float movementMaxPosition)
         {
             switch (startupContinuousMovementType)
             {
                 case ContinuousMovementType.YoYo:
                     var newPosYoyo = _xAxis
-                        ? new Vector2(cannonTransform.position.x, movementMaxPosition)
-                        : new Vector2(movementMaxPosition, cannonTransform.position.y);
+                        ? new Vector2(ObjectTransform.position.x, movementMaxPosition)
+                        : new Vector2(movementMaxPosition, ObjectTransform.position.y);
 
                     
-                    cannonTransform.DOMove(newPosYoyo, speed).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
+                    ObjectTransform.DOMove(newPosYoyo, speed).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
                     break;
                 case ContinuousMovementType.Rotate90:
                     var newPosRot90 = new Vector3(0, 0, 90);
-                    cannonTransform.DORotate(newPosRot90, speed, RotateMode.FastBeyond360).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Incremental);
+                    ObjectTransform.DORotate(newPosRot90, speed, RotateMode.FastBeyond360).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Incremental);
                     break;
                 case ContinuousMovementType.Rotate180:
                     var newPosRot180 = new Vector3(0, 0, 180);
-                    cannonTransform.DORotate(newPosRot180, speed, RotateMode.FastBeyond360).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Incremental);
+                    ObjectTransform.DORotate(newPosRot180, speed, RotateMode.FastBeyond360).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Incremental);
                     break;
             }
         }

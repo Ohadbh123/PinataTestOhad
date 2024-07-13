@@ -24,7 +24,7 @@ namespace Managers
         private void Start()
         {
             UpdateStarsAmount();
-            SetupButtonListeners();
+            SetupButtons();
             transform.localScale = Vector3.zero;
             _closeButton.onClick.AddListener(LoadMainScreen);
         }
@@ -99,10 +99,11 @@ namespace Managers
             _tweenSequence.Append(_closeButton.transform.DOScale(Vector3.one, _animationDelay));
         }
 
-        private void SetupButtonListeners()
+        private void SetupButtons()
         {
             for (var i = 0; i < _levelsButtons.Length; i++)
             {
+                _levelsButtons[i].SetLevelStatus(_levels[i].LevelData.GetStarsAmount());
                 _levelsButtons[i].SetLevelIndex(i + 1);
                 _levelsButtons[i].AddButtonListener(LoadLevel , i);
             }
@@ -133,7 +134,7 @@ namespace Managers
         public void UpdateLevelCompleted(int coins)
         {
             _currentLevelManager.UpdateLevelData(coins);
-            _levelsButtons[_currentLevelIndex].SetLevelCompleted(coins == 3);
+            _levelsButtons[_currentLevelIndex].SetLevelStatus(coins);
         }
         
         public void UpdateStarsAmount()

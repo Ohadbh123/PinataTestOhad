@@ -34,9 +34,20 @@ namespace UI
             _button.onClick.RemoveListener(delegate { action(levelIndex); });
         }
 
-        public void SetLevelCompleted(bool allStarsAchieved)
+        public void SetLevelStatus(int starsAchieved)
         {
-            _buttomImage.color = allStarsAchieved?  Color.green : Color.red;
+            switch (starsAchieved)
+            {
+                case 3:
+                    _buttomImage.color = Color.green;
+                    return;
+                case 0:
+                    ResetButton();
+                    return;
+                default:
+                    _buttomImage.color =  Color.red;
+                    break;
+            }
         }
 
         public void ResetButton()

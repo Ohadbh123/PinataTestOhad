@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a9ccdfc7fa64de48941e9fbb3051c0d, type: 3}
-  m_Name: Canon-YoYo-XAxis
+  m_Name: Canon - Rotating 180
   m_EditorClassIdentifier: 
   OnHitMovementType: 0
-  ContinuousMovementConfig: {fileID: 11400000, guid: 92e4947679660b941a6328e371dc7bdf, type: 2}
+  ContinuousMovementConfig: {fileID: 11400000, guid: 502c3b2da64e97c4f9297ed27da8821c, type: 2}
   ProjectilePrefab: {fileID: 8246916177889625554, guid: 41946ed5d0743a040b0c96dadc114040, type: 3}
   CanShootOnStartup: 0
-  MovementSpeed: 1
-  TurnMovementSpeed: 0
-  CooldownTime: 1
+  MovementSpeed: 0.5
+  TurnMovementSpeed: 1
+  CooldownTime: 2
