@@ -9,6 +9,7 @@ namespace Gameplay
     public class CannonController : MonoBehaviour, IInteractable
     {
         private static readonly int _animatorShootTrigger = Animator.StringToHash("Shoot");
+        private static readonly int _animatorInteractTrigger = Animator.StringToHash("Interact");
 
         [SerializeField] private CannonConfig _cannonConfig;
         [SerializeField] private Animator _animator;
@@ -43,6 +44,7 @@ namespace Gameplay
         public void Interact(ProjectileController projectileController)
         {
             _wasDeactivated = false;
+            _animator.SetTrigger(_animatorInteractTrigger);
             _cannonConfig.TurnCannonOnHit(transform);
             ResetCannon();
             projectileController.DestroyProjectile();
