@@ -17,6 +17,7 @@ namespace Gameplay
         [SerializeField] private Collider2D _collider2D;
         [SerializeField] private GameObject _activeCannonMarker;
         [SerializeField] private AudioSource _fireSfx;
+        [SerializeField] private AudioSource _loadSfx;
         [SerializeField] private float _movementMaxPosition;
 
         private bool _isAvailableToShoot;
@@ -44,6 +45,7 @@ namespace Gameplay
         public void Interact(ProjectileController projectileController)
         {
             _wasDeactivated = false;
+            AudioManager.Instance.Play(_loadSfx);
             _animator.SetTrigger(_animatorInteractTrigger);
             _cannonConfig.TurnCannonOnHit(transform);
             ResetCannon();
